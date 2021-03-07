@@ -73,8 +73,8 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\HomeMeteoStation;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\Wire\src;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\Wire\src\utility;C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino;C:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\eightanaloginputs;C:\Program Files (x86)\Arduino\hardware\tools\avr\\lib\gcc\avr\7.3.0\include;C:\Program Files (x86)\Arduino\hardware\tools\avr\avr\include;C:\Program Files (x86)\Arduino\hardware\tools\avr\\lib\gcc\avr\7.3.0\include;C:\Program Files (x86)\Arduino\hardware\tools\avr\avr\include-fixed;C:\Program Files (x86)\Arduino\hardware\tools\avr\avr\include\avr;C:\Program Files (x86)\Arduino\hardware\tools\avr\lib\gcc\avr\4.9.2\include;C:\Program Files (x86)\Arduino\hardware\tools\avr\lib\gcc\avr\4.9.2\include;C:\Program Files (x86)\Arduino\hardware\tools\avr\lib\gcc\avr\4.9.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ForcedIncludeFiles>$(ProjectDir)__vm\.HomeMeteoStation.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\Firmware;$(ProjectDir)..\..\libraries\Adafruit_CCS811-master;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\Wire\src;$(ProjectDir)..\..\libraries\Adafruit_Sensor-master;$(ProjectDir)..\..\libraries\Adafruit_BMP280_Library-master;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\SPI\src;$(ProjectDir)..\..\libraries\U8glib\src;$(ProjectDir)..\..\libraries\Adafruit_Si7021_Library-1.4.0;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\Wire\src\utility;C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino;C:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\eightanaloginputs;C:\Program Files (x86)\Arduino\hardware\tools\avr\\lib\gcc\avr\7.3.0\include;C:\Program Files (x86)\Arduino\hardware\tools\avr\avr\include;C:\Program Files (x86)\Arduino\hardware\tools\avr\\lib\gcc\avr\7.3.0\include;C:\Program Files (x86)\Arduino\hardware\tools\avr\avr\include-fixed;C:\Program Files (x86)\Arduino\hardware\tools\avr\avr\include\avr;C:\Program Files (x86)\Arduino\hardware\tools\avr\lib\gcc\avr\4.9.2\include;C:\Program Files (x86)\Arduino\hardware\tools\avr\lib\gcc\avr\4.9.2\include;C:\Program Files (x86)\Arduino\hardware\tools\avr\lib\gcc\avr\4.9.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ProjectDir)__vm\.Firmware.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PreprocessorDefinitions>__AVR_atmega328p__;__AVR_ATmega328P__;__AVR_ATmega328p__;F_CPU=16000000L;ARDUINO=108012;ARDUINO_AVR_NANO;ARDUINO_ARCH_AVR;__cplusplus=201103L;_VMICRO_INTELLISENSE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -106,7 +106,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BME280.h" />
+    <ClInclude Include="__vm\.Firmware.vsarduino.h" />
     <ClInclude Include="__vm\.HomeMeteoStation.vsarduino.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BME280.cpp" />
   </ItemGroup>
   <PropertyGroup>
     <DebuggerFlavor>VisualMicroDebugger</DebuggerFlavor>
